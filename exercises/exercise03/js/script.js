@@ -1,5 +1,4 @@
 //Global constants
-
 var TOTAL_CAT_GIFS = 54;
 var TOTAL_BACKGROUNDS = 9;
 
@@ -39,7 +38,7 @@ $(document).ready(function () {
     }
 
     //To make sure the div content wraps the whole thing
-    $("#div-content").append("<div>hello world</div>");
+    $("#div-content").append("<div></div>");
 });
 
 //**From and Until included**
