@@ -1,0 +1,42 @@
+body {
+	font-family: "Comic Sans MS", cursive, sans-serif;
+    background: #00ff00;
+}
+
+.handle {
+    width:40px;
+    height:40px;
+    background-color: red;
+    position: absolute;
+    right: 10px;
+}
+
+.div-content {
+    width: 1200px;
+    height: 90%;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.resizable-helper {
+    border: 1px black thick;
+}
+
+/*.div-content > * {
+    position: absolute;
+}*/
+
+#div-content-first {
+    background-color: pink;
+}
+
+#div-content-second {
+    background-color: rebeccapurple;
+}
+
+#title {
+	font-size: 100px;
+    margin-left: 40px;
+}
+
