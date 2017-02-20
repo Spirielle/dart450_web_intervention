@@ -1,45 +1,10 @@
 
 $(document).ready(function () {
-    ////Refresh
-    //setTimeout(function () {
-    //    window.location.reload(1);
-    //}, 5000);
+    setPageElementsSize();
+});
 
-    ////Title
-    //setInterval(function () {
-    //    $("#title").css("color", randomColor(1.0));
-    //}, 100);
-
-    //$('.div-content').resizable({handles: 'n,w'});
-
-    $(function () {
-        $("#div-content-second").resizable({
-            handles: "e",
-            maxWidth: 1200
-        });
-    });
-
-    //$('.handle').on('mousedown', function (e) {
-    //    var $dragable = $(this).parent(),
-    //        startWidth = $dragable.width(),
-    //        pX = e.pageX;
-
-    //    $(document).on('mouseup', function (e) {
-    //        $(document).off('mouseup').off('mousemove');
-    //    });
-    //    $(document).on('mousemove', function (me) {
-    //        var mx = (me.pageX - pX);
-    //        //var my = (me.pageY - pY);
-
-    //        $dragable.css({
-    //            left: mx / 2,
-    //            width: startWidth - mx,
-    //            //top: my
-    //        });
-    //    });
-
-    //});
-
+$(window).on('resize', function () {
+    setPageElementsSize();
 });
 
 //**From and Until included**
@@ -47,25 +12,29 @@ function randomInt(intFrom, intUntil) {
     return Math.floor((Math.random() * intUntil) + intFrom);
 }
 
-//function generateRandomImageContent() {
-//    var numberOfImages = randomInt(1, 4);
-//    var content = "";
+//Sets a static width to most elements based on the window's size
+//This allows the second layer effect when resizing the div "div-content-1"
+function setPageElementsSize() {
+    var windowWidth = $(window).width();
+    var contentWith = windowWidth * 0.8;
+    var contentMargin = windowWidth * 0.1;
 
-//    for (var i = 0; i < numberOfImages; ++i) {
-//        //Adds an img tag with a random cat gif
-//        content += "<img src='img/cat" + randomInt(1, TOTAL_CAT_GIFS) + ".gif'>";
-//    }
-//    return content;
-//}
+    var contentCss = {
+        width: contentWith,
+        marginLeft: contentMargin,
+    }
 
-//function setRandomBackground() {
-//    var backgroundPath = "img/bg" + randomInt(1, TOTAL_BACKGROUNDS) + ".gif";
-//    $('body').css('background-image', 'url(' + backgroundPath + ')');
-//}
+    $(".div-content").css(contentCss);
 
-//var randomColor = function (transparency) {
-//    var r = randomInt(0, 255);
-//    var g = randomInt(0, 255);
-//    var b = randomInt(0, 255);
-//    return "rgba(" + r + ", " + g + ", " + b + ", " + transparency + ")";
-//};
+    $('#div-content-second').resizable({
+        handles: "e",
+        maxWidth: contentWith,
+        //This parts prevents the div resizing from triggering the window resize event
+        //Solution found here: http://stackoverflow.com/questions/15902920/resizing-an-element-triggers-the-resize-event-of-the-window
+        create: function (event, ui) {
+            $(this).parent().on('resize', function (e) {
+                e.stopPropagation();
+            });
+        }
+    });
+}
