@@ -1,10 +1,17 @@
+
+/*Cynthia L. McLaughlin
+  February 2017
+
+  Interactive Personality CSS
+*/
+
+
 body {
     background: #982846;
 }
 
+/*Makes sure the layout stays the same event if div is resized*/
 .div-content {
-    width: 1200px;
-    height: 1200px;
     position: absolute;
     overflow: hidden;
     white-space: nowrap;

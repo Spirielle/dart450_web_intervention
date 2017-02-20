@@ -1,8 +1,18 @@
+//
+//  Cynthia L. McLaughlin
+//  February 2017
+//
+//  Interactive Personality
+//      This code makes the top div resizable while ajusting the
+//      whole content to the window size
+//
+
 
 $(document).ready(function () {
     setPageElementsSize();
 });
 
+//Adapt the content size on resize window
 $(window).on('resize', function () {
     setPageElementsSize();
 });
@@ -44,12 +54,14 @@ function setPageElementsSize() {
         fontSize: fontSize
     }
 
+    //Apply previously determined css
     $(".div-content").css(contentCss);
     $(".img-profile").css(pictureCss);
     $(".div-description").css(descriptionCss);
     $(".div-title").css("font-size", titleFontSize);
     $(".div-logos").find("img").height(logoHeight);
 
+    //Makes the top div resizable from the right side
     $('#div-content-first').resizable({
         handles: "e",
         maxWidth: contentWidth,
