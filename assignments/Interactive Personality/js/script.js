@@ -17,6 +17,7 @@ function randomInt(intFrom, intUntil) {
 function setPageElementsSize() {
     var windowWidth = $(window).width();
     var contentWidth = windowWidth * 0.7;
+    var contentHeight = windowWidth * 0.6;
     var contentMargin = windowWidth * 0.15;
     var pictureWidth = contentWidth * 0.3;
     var pictureTopMargin = contentWidth * 0.05;
@@ -24,9 +25,11 @@ function setPageElementsSize() {
     var descriptionPadding = descriptionWidth * 0.1;
     var fontSize = descriptionWidth * 0.03;
     var titleFontSize = descriptionWidth * 0.04;
+    var logoHeight = contentWidth * 0.12;
 
     var contentCss = {
         width: contentWidth,
+        height: contentHeight,
         marginLeft: contentMargin,
     }
 
@@ -45,6 +48,7 @@ function setPageElementsSize() {
     $(".img-profile").css(pictureCss);
     $(".div-description").css(descriptionCss);
     $(".div-title").css("font-size", titleFontSize);
+    $(".div-logos").find("img").height(logoHeight);
 
     $('#div-content-first').resizable({
         handles: "e",

@@ -17,6 +17,10 @@ body {
     padding:20px;
 }
 
+.div-logos {
+    float: left;
+}
+
 #div-content-first {
     background-color: #eef0f2;
 }
