@@ -5,7 +5,7 @@ Even though it required a lot of polishing, debugging and testing, it's a really
 
 ##Choices Explanation
 ###Title
-Cynthia is the name I use at university and work. For my friends, family and when I play online it's usually Supi. It's also a meme of mine to say "Supi Desu~~" which means \ldblquote I'm Supi" in Japanese.
+Cynthia is the name I use at university and work. For my friends, family and when I play online it's usually Supi. It's also a meme of mine to say "Supi Desu~~" which means "I'm Supi" in Japanese.
 
 ###Image
 To have a nice visual effect I kept the same setup, but changed from professional to very casual.
