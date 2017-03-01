@@ -1,0 +1,12 @@
+/*
+Cynthia L. McLaughlin
+February 2017
+
+Exercise 06  Surveillance
+*/
+
+
+#card, #name{
+	position: absolute;
+	display: none; /* Hide the elements until face is found */
+}

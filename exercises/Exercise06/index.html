@@ -1,0 +1,42 @@
+<!--//  Cynthia L. McLaughlin
+//  February 2017
+//
+//  Exercise 06 - Surveillance
+//  Based on Pippin Barr example https://github.com/pippinbarr/dart450_class/tree/master/examples/week06/attentionseeker
+//
+//  Tracks the user's face using tracking.js and frame it with an id card
+//  The code also prompt the user for his/her name and adds it on top of the card
+//-->
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>Exercise06 Surveillance</title>
+
+    <!-- Style -->
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <!-- Script -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="js/tracking-min.js"></script>
+    <script src="js/data/face-min.js"></script>
+    <script src="js/script.js"></script>
+
+</head>
+
+<body>
+
+    <!-- Video feed-->
+    <video id="webcam" width="640" height="480" preload autoplay loop muted></video>
+    <img src="img/card.png" id="card"/>
+
+    <!-- Honestly no pun intended for the place holder name,
+         but now that I realize, I find it pretty funny -->
+    <div id="name">Foo Bar</div>
+</body>
+
+</html>
