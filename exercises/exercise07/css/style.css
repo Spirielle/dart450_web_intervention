@@ -1,0 +1,55 @@
+
+body {
+	font-family: "Lucida Sans Unicode", "Lucida Grande", sans-serif;
+	height: 30000px;
+	overflow: hidden; /*Mouhahahaha*/
+
+	/* Permalink - use to edit and share this gradient:
+	 http://colorzilla.com/gradient-editor/#c17c7c+0,d1b887+15,8ebc7a+32,7abca3+44,7abca3+44,789cba+57,8278ba+72,b777a1+90,b7797a+100 */
+	background: #c17c7c; /* Old browsers */
+	background: -moz-linear-gradient(top,  #c17c7c 0%, #d1b887 15%, #8ebc7a 32%, #7abca3 44%, #7abca3 44%, #789cba 57%, #8278ba 72%, #b777a1 90%, #b7797a 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top,  #c17c7c 0%,#d1b887 15%,#8ebc7a 32%,#7abca3 44%,#7abca3 44%,#789cba 57%,#8278ba 72%,#b777a1 90%,#b7797a 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom,  #c17c7c 0%,#d1b887 15%,#8ebc7a 32%,#7abca3 44%,#7abca3 44%,#789cba 57%,#8278ba 72%,#b777a1 90%,#b7797a 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#c17c7c', endColorstr='#b7797a',GradientType=0 ); /* IE6-9 */
+}
+
+h1 {
+	text-align: center;
+	color: white;
+}
+
+#cat {
+	position: absolute;
+	top: 21000px;
+	visibility: hidden;
+	cursor: pointer;
+	cursor: hand; 
+}
+
+.message {
+	padding: 30px;
+	font-size: 1.5em;
+	display: inline-block;
+	position: absolute;
+	color: white;
+	visibility: hidden;
+	max-width: 250px;
+}
+
+#scroll {
+	position: fixed;
+	top: 10%;
+	left: 8%;
+	width: 200px;
+	cursor: pointer;
+	cursor: hand; 
+}
+
+#scroll-up {
+	position: absolute;
+	top: 29800px;
+	left: 50%;
+	width: 200px;
+	cursor: pointer;
+	cursor: hand; 
+}
