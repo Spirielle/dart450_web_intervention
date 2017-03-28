@@ -35,7 +35,11 @@ $(document).ready(function() {
 //      and the check less obvious
 function testInput(inputContent) {
     if (inputContent == "Floof")
+    {
+        localStorage.setItem("level1Completion", true);
         alert("You did it!");
+        window.location.replace("index.html");
+    }
 }
 
 //**From and Until included**
