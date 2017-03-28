@@ -1,0 +1,55 @@
+
+/*Cynthia L. McLaughlin
+  March 2017
+*/
+
+@font-face {
+    font-family: GaiteraBall;
+    src: url(../fonts/Gaitera_Ball.ttf);
+}
+
+body {
+    background-color: white;
+}
+
+#div-content {
+    font-family: GaiteraBall;
+    width: 80vw;
+    height:80vh;
+    margin: auto;
+    margin-top:10vh;
+    background-color: #d3e2ec;
+
+}
+
+#img-cat {
+    position: absolute;
+    left: calc(50vw - 200px);
+    top: calc(50vh - 250px);
+    width: 500px;
+}
+
+#img-bowl {
+    position: absolute;
+    left: calc(50vw - 280px);
+    top: calc(50vh + 100px);
+    width: 250px;
+}
+
+#input-name {
+    position: absolute;
+    text-align: center;
+    background-color: transparent;
+    border: none;
+    font-family: GaiteraBall;
+    font-size: 20px;
+    left: calc(50vw - 260px);
+    top: calc(50vh + 205px);
+    width: 200px;
+}
+
+#test {
+    position: absolute;
+    font-family: GaiteraBall;
+    font-size: 30px;
+}
