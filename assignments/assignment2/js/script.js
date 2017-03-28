@@ -4,27 +4,39 @@
 //
 //
 
-function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-}
+//  IDEAS
+//  Cat sound when level complete?
+//
+//  look at underscore library (helper library)
+//  Casper for hidden cat heheheh
+//
 
-async function flickerName() {
-    $("#input-name").css("font-size", "+=1");
-    await sleep(200);
-    $("#input-name").css("font-size", "-=1");
-    await sleep(200);
-}
 
-$(document).ready(function () {
-
-    setInterval(function () {
-        flickerName();
-    }, 500);
+$(document).ready(function animateBowlName() {
+    $('#input-name').animate({
+        //Makes text alternate size to fit the visual aesthetic of the game
+        fontSize: $('#input-name').css('fontSize') == '20px' ? '21px' : '20px'
+    }, 200, animateBowlName);
 });
+
+$(document).ready(function() {
+    $("#input-name").blur(function () {
+        testInput($("#input-name").val());
+    });
+});
+
+
 
 //$(window).on('resize', function () {
 //    setPageElementsSize();
 //});
+
+//TODO: Make this function more "universal"
+//      and the check less obvious
+function testInput(inputContent) {
+    if (inputContent == "Floof")
+        alert("You did it!");
+}
 
 //**From and Until included**
 function randomInt(intFrom, intUntil) {
