@@ -19,10 +19,8 @@ $(document).ready(function animateBowlName() {
     }, 200, animateBowlName);
 });
 
-$(document).ready(function() {
-    $("#input-name").blur(function () {
-        testInput($("#input-name").val());
-    });
+$(document).ready(function () {
+
 });
 
 
@@ -31,12 +29,26 @@ $(document).ready(function() {
 //    setPageElementsSize();
 //});
 
-//TODO: Make this function more "universal"
-//      and the check less obvious
-function testInput(inputContent) {
-    if (inputContent == "Floof")
+function testInput(inputContent, levelId) {
+
+    //Get hash of answer
+    var shaObj = new jsSHA("SHA-512", "TEXT");
+    shaObj.update(inputContent);
+    var hash = shaObj.getHash("HEX");
+    var rightAnswer;
+
+    switch(levelId) {
+        case 1:
+            rightAnswer = "41857db3118a2814c1c88ac684cf100e63665c26345ae9468d947b80de81b981669d84bbcfa3e0995228842d52704322591bfaa99c0cd998341298bdddc061de";
+            break;
+        default:
+            Console.Log("Testing input for an nonexistent level or level not requiring input testing")
+            return;
+    }
+
+    if (hash == rightAnswer)
     {
-        localStorage.setItem("level1Completion", true);
+        localStorage.setItem("level" + levelId + "Completion", true);
         alert("You did it!");
         window.location.replace("index.html");
     }
