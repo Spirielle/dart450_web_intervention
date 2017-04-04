@@ -26,6 +26,7 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
     <script src="js/script.js" content="text/javascript"></script>
+    <script src="js/scriptIndex.js" content="text/javascript"></script>
 
     <style>
         .div-level {
@@ -47,41 +48,22 @@
         }
 
     </style>
-
-    <script>
-        $(document).ready(function() {
-            //Getting Level Completion
-            var level1Completed = localStorage.getItem("level1Completion") == "true";
-            $("#star-level1").addClass(level1Completed ? "fa-star" : "fa-star-o");
-
-
-            ////Setting Onclick Events
-            //$("#div-level1").click(function() {
-            //  alert("clicked");
-            //  location.href = "floof.html";
-            //});
-
-        });
-
-
-
-    </script>
 </head>
 
 <body>
     <div id="div-content">
         <h1>Outside the iFrame</h1>
-        <div class="div-level">
+        <div class="div-level" id="div-level1">
             My name is Floof
             <span class="completion-star fa" id="star-level1"></span>
         </div>
-        <div class="div-level">
+        <div class="div-level" id="div-level2">
             My name is Casper
-            <span class="completion-star fa fa-star-o" id="star-level2"></span>
+            <span class="completion-star fa" id="star-level2"></span>
         </div>
-        <div class="div-level">
+        <div class="div-level" id="div-level3">
             Where's my food?
-            <span class="completion-star fa fa-star-o" id="star-level3"></span>
+            <span class="completion-star fa" id="star-level3"></span>
         </div>
     </div>
 </body>
