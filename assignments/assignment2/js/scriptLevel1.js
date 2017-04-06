@@ -6,7 +6,7 @@
 
 
 $(document).ready(function () {
-    $("#input-name").blur(function () {
-        testInput($("#input-name").val(), 1);
+    $("#bowl-name").blur(function () {
+        testInput($("#bowl-name").val(), 1);
     });
 });

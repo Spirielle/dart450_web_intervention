@@ -13,9 +13,9 @@
 
 
 $(document).ready(function animateBowlName() {
-    $('#input-name').animate({
+    $('#bowl-name').animate({
         //Makes text alternate size to fit the visual aesthetic of the game
-        fontSize: $('#input-name').css('fontSize') == '20px' ? '21px' : '20px'
+        fontSize: $('#bowl-name').css('fontSize') == '20px' ? '21px' : '20px'
     }, 200, animateBowlName);
 });
 
@@ -47,11 +47,13 @@ function testInput(inputContent, levelId) {
     }
 
     if (hash == rightAnswer)
-    {
-        localStorage.setItem("level" + levelId + "Completion", true);
-        alert("You did it!");
-        window.location.replace("index.html");
-    }
+        levelCompleted(levelId);
+}
+
+function levelCompleted(levelId) {
+    localStorage.setItem("level" + levelId + "Completion", true);
+    alert("You did it!");
+    window.location.replace("index.html");
 }
 
 //**From and Until included**

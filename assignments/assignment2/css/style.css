@@ -10,6 +10,7 @@
 
 body {
     background-color: white;
+	min-height: 500px;
 }
 
 h1 {
@@ -35,21 +36,37 @@ h1 {
 }
 
 #img-bowl {
+    /*position: absolute;
+    left: calc(50vw - 280px);
+    top: calc(50vh + 100px);
+    width: 250px;*/
+}
+
+#div-bowl {
     position: absolute;
     left: calc(50vw - 280px);
     top: calc(50vh + 100px);
     width: 250px;
 }
 
-#input-name {
+#div-bowl-level3 {
+    position: absolute;
+    left: 250px;
+    top: calc(50vh + 100px);
+    width: 250px;
+}
+
+#bowl-name {
     position: absolute;
     text-align: center;
     background-color: transparent;
     border: none;
     font-family: GaiteraBall;
     font-size: 20px;
-    left: calc(50vw - 260px);
-    top: calc(50vh + 205px);
+    /*left: calc(50vw - 260px);
+    top: calc(50vh + 205px);*/
+	top: 130px;
+	left: 50px;
     width: 200px;
 }
 
