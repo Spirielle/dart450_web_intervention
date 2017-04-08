@@ -4,7 +4,7 @@
 //
 //
 
-var NUMBER_OF_LEVELS = 4;
+var NUMBER_OF_LEVELS = 5;
 
 $(document).ready(function () {
     initializeLevelDivs();
@@ -16,7 +16,6 @@ function getLocation() {
     //Making sure the "asked for location" popup doesn't always show
     var cookie = Cookies.get('positionRequest');
     if (cookie === null ||cookie === undefined) {  // if expired / non-existent
-        alert("making cookies");
         //Get the position
         if (navigator.geolocation) {
             navigator.geolocation.getCurrentPosition(storePosition);
@@ -29,7 +28,7 @@ function storePosition(position) {
     //Take and store the position 
     localStorage.setItem("longitude", position.coords.longitude);
     localStorage.setItem("latitude", position.coords.latitude);
-    alert(position.coords.longitude);
+
     //Cookie expires after an hour which mean the position will only be asked once per hour
     var now = new Date();
     var expiringDate = now.setHours(now.getHours() + 1);
