@@ -17,7 +17,7 @@ $(document).ready(function () {
 
             var distanceBetween = cat - bowl;
 
-            if (distanceBetween > 50 && distanceBetween < 100)
+            if (distanceBetween > 0 && distanceBetween < 150)
                 levelCompleted(3);
         },
         1000);

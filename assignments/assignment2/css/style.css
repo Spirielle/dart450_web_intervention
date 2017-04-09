@@ -10,22 +10,21 @@
 
 body {
     background-color: white;
-	min-height: 500px;
+    min-height: 500px;
 }
 
 h1 {
-	text-align: center;
+    text-align: center;
 }
 
 #div-content {
     font-family: GaiteraBall;
     width: 80vw;
-    height:80vh;
+    height: 80vh;
     margin: auto;
-    margin-top:10vh;
+    margin-top: 10vh;
     background-color: #d3e2ec;
-	padding: 20px;
-
+    padding: 20px;
 }
 
 #img-cat {
@@ -65,8 +64,8 @@ h1 {
     font-size: 20px;
     /*left: calc(50vw - 260px);
     top: calc(50vh + 205px);*/
-	top: 130px;
-	left: 50px;
+    top: 130px;
+    left: 50px;
     width: 200px;
 }
 
@@ -74,4 +73,25 @@ h1 {
     position: absolute;
     font-family: GaiteraBall;
     font-size: 30px;
+}
+
+/*Level 6*/
+#iknow {
+    pointer-events: none;
+    cursor: default;
+    text-decoration: none;
+}
+
+    #iknow:link {
+        color: #d3e2ec;
+    }
+
+    #iknow:visited {
+        color: black;
+    }
+
+#div-hidden {
+    position: absolute;
+    left: calc(50vw + 300px);
+    top: calc(50vh + 100px);
 }
