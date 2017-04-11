@@ -14,7 +14,7 @@
 
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
 
-    <title>Casper</title>
+    <title>Outside the iFrame</title>
 
     <!-- Style -->
     <link rel="stylesheet" type="text/css" href="css/style.css" />
@@ -24,27 +24,27 @@
 
     <!-- Script -->
     <!-- Hashing Library  https://github.com/Caligatio/jsSHA#hashing -->
-    <script src="js/sha512.js"></script>  
+    <script type="text/javascript" src="js/sha512.js"></script>  
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-    <script src="js/script.js"></script>
-    <script src="js/scriptLevel2.js"></script>
-
+    <script src="js/js.cookie.js" content="text/javascript"></script>       <!-- https://github.com/js-cookie/js-cookie -->
+    <script>
+        function hash() {
+            var shaObj = new jsSHA("SHA-512", "TEXT");
+            shaObj.update($("#input").val());
+            var hash = shaObj.getHash("HEX");
+            $("#result").html(hash);
+        }
+    </script>
 </head>
 
 <body>
     <div id="div-content">
-        <h1>My name is Casper!</h1>
-        <img id="img-cat" src="img/cat2.gif" style="visibility:hidden"/>
-        <div id="div-bowl">
-            <img id="img-bowl" src="img/foodbowlfull.gif" />
-            <div id="bowl-name">Casper</div>
-        </div>
-        <div id="div-answer">
-            <a href="index.html" class="a-button">Go Back To Menu</a>
-            <a href="level3.html" class="a-button">Next Level</a>
-            You did it!<br />
-        </div>
+        <h1>Hash Helper</h1>
+        <input type="text" id="input"/>
+        <button onclick="hash()">Hash!</button>
+        <h3>Result:</h3>
+        <p id="result" style="padding: 20px; border: solid 1px black"></p>
     </div>
 </body>
 

@@ -4,12 +4,13 @@
 //
 //
 
-
+var completed = false;
 $(document).ready(function () {
     setInterval(
         function () {
             //Also checks winning condition
-            findSunriseTime();
+            if(!completed)
+                findSunriseTime();
         },
         2000);
 });
@@ -35,5 +36,8 @@ function sunriseSunsetCallback(sunriseData) {
     //Check if sun is rising right now
     var now = new Date();
     if (now.getUTCHours() == arrayTime[0] && (now.getUTCMinutes() >= arrayTime[1] - 5 && now.getUTCMinutes() <= arrayTime[1] + 5))
+    {
+        completed = true;
         levelCompleted(4);
+    }
 }

@@ -17,6 +17,14 @@ h1 {
     text-align: center;
 }
 
+.a-button {
+    background-color: white;
+    text-decoration: none;
+    padding: 10px;
+    float: right;
+    margin: 5px;
+}
+
 #div-content {
     font-family: GaiteraBall;
     width: 80vw;
@@ -75,6 +83,13 @@ h1 {
     font-size: 30px;
 }
 
+#div-answer {
+    border: solid white;
+    padding: 10px;
+    margin-top: calc(80vh - 150px);
+    display: none;
+}
+
 /*Level 6*/
 #iknow {
     pointer-events: none;
@@ -95,3 +110,4 @@ h1 {
     left: calc(50vw + 300px);
     top: calc(50vh + 100px);
 }
+

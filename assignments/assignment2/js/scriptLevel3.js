@@ -4,7 +4,7 @@
 //
 //
 
-
+var completed = false;
 $(document).ready(function () {
     setInterval(
         function() {
@@ -17,8 +17,10 @@ $(document).ready(function () {
 
             var distanceBetween = cat - bowl;
 
-            if (distanceBetween > 0 && distanceBetween < 150)
+            if (distanceBetween > 0 && distanceBetween < 150 && !completed) {
                 levelCompleted(3);
+                completed = true;
+            }
         },
         1000);
 });
