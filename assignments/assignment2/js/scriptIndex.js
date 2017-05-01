@@ -4,7 +4,7 @@
 //
 //
 
-var NUMBER_OF_LEVELS = 7;
+var NUMBER_OF_LEVELS = 8;
 
 $(document).ready(function () {
     initializeLevelDivs();
