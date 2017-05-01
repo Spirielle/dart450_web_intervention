@@ -15,20 +15,30 @@ body {
 
 h1 {
     text-align: center;
+	clear: both;
 }
 
 .a-button {
     background-color: white;
     text-decoration: none;
     padding: 10px;
-    float: right;
     margin: 5px;
+	color: black;
 }
 
 #div-content {
     font-family: GaiteraBall;
     width: 80vw;
     height: 80vh;
+    margin: auto;
+    margin-top: 10vh;
+    background-color: #d3e2ec;
+    padding: 20px;
+}
+
+#div-menu {
+    font-family: GaiteraBall;
+    width: 80vw;
     margin: auto;
     margin-top: 10vh;
     background-color: #d3e2ec;
@@ -84,10 +94,14 @@ h1 {
 }
 
 #div-answer {
-    border: solid white;
     padding: 10px;
-    margin-top: calc(80vh - 150px);
+    margin-top: calc(80vh - 170px);
+    border: solid white;
     display: none;
+}
+
+#div-nav-buttons {
+	float: right;
 }
 
 /*Level 6*/
