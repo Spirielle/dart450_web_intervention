@@ -6,9 +6,9 @@
 
 //  IDEAS
 //  Cat sound when level complete?
+//  Maybe empty the bowl as well
 //
 //  look at underscore library (helper library)
-//  Casper for hidden cat heheheh
 //
 
 
